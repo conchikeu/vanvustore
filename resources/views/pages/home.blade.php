@@ -22,7 +22,8 @@
     </style>
 @stop
 @section('content')
-    <div class="slider-area">
+    <div class="container">
+        <div class="slider-area">
         <!-- Slider -->
         <div class="block-slider block-slider4">
             <ul class="" id="bxslider-home4">
@@ -67,38 +68,7 @@
         </div>
         <!-- ./Slider -->
     </div> <!-- End slider area -->
-
-    <div class="promo-area">
-        <div class="zigzag-bottom"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-promo promo1">
-                        <i class="fa fa-refresh"></i>
-                        <p>30 ngày đổi trả</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-promo promo2">
-                        <i class="fa fa-truck"></i>
-                        <p>Miễn phí giao hàng</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-promo promo3">
-                        <i class="fa fa-lock"></i>
-                        <p>Thanh toán bảo mật</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-promo promo4">
-                        <i class="fa fa-gift"></i>
-                        <p>Khuyến mãi hấp dẫn</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End promo area -->
+    </div>
 
     <div class="maincontent-area">
         <div class="zigzag-bottom"></div>

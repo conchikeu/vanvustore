@@ -17,47 +17,111 @@
             	</div>
             	<ul class="header-iconshape">
             		<li class="header-li">
-            			<a href="/"></a>
-	            		<i class="fa fa-globe fa-shape"></i>
-	            		<span class="header-li-span">Hàng Quốc Tế</span>
+            		  <div class="dropdown">
+                        <i class="fa fa-globe fa-shape"></i>
+                        <button class="header-li-span dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Hàng Quốc Tế
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                                <span class="style-header-dropbtn">Mỹ</span>
+                                <i class="fa fa-chain i-rightfloat"></i>
+                                </a>
+                            </li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                                <span class="style-header-dropbtn">Nhật</span>
+                                <i class="fa fa-chain i-rightfloat"></i>
+                                </a>
+                            </li>
+                            <li role="presentation" class="divider"></li>
+                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                                <span class="style-header-dropbtn">Hàn Quốc</span>
+                                <i class="fa fa-chain i-rightfloat"></i>
+                                </a>
+                            </li>
+                        </ul>
+                      </div>
             		</li>
             		<li class="header-li">
-            			<a href="/"></a>
-	            		<i class="fa fa-truck fa-shape"></i>
-	            		<span class="header-li-span">Giao Hàng Nhanh</span>
-            		</li>
+                      <div class="dropdown">
+                        <i class="fa fa-truck fa-shape"></i>
+                        <button class="header-li-span dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Giao Hàng Nhanh
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                                <span class="style-header-dropbtn">VNPost</span>
+                                <i class="fa fa-chain i-rightfloat"></i>
+                                </a>
+                            </li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                                <span class="style-header-dropbtn">VNPost</span>
+                                <i class="fa fa-chain i-rightfloat"></i>
+                                </a>
+                            </li>
+                            <li role="presentation" class="divider"></li>
+                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                                <span class="style-header-dropbtn">VNPost</span>
+                                <i class="fa fa-chain i-rightfloat"></i>
+                                </a>
+                            </li>                        
+                        </ul>
+                      </div>
+                    </li>
             		<li class="header-li">
-            			<a href="/"></a>
-	            		<i class="fa fa-shopping-cart fa-shape"></i>
-	            		<span class="header-li-span">Giỏ Hàng</span>
-            		</li>
+                      <div class="dropdown">
+                        <i class="fa fa-shopping-cart fa-shape"></i>
+                        <button class="header-li-span dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">
+                            <span>Giỏ Hàng</span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                                <span class="style-header-dropbtn">VNPost</span>
+                                <i class="fa fa-chain i-rightfloat"></i>
+                                </a>
+                            </li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                                <span class="style-header-dropbtn">VNPost</span>
+                                <i class="fa fa-chain i-rightfloat"></i>
+                                </a>
+                            </li>
+                            <li role="presentation" class="divider"></li>
+                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                                <span class="style-header-dropbtn">VNPost</span>
+                                <i class="fa fa-chain i-rightfloat"></i>
+                                </a>
+                            </li>
+                        </ul>
+                      </div>
+                    </li>
             	</ul>
             </div>
         </div>
         <nav class="header-menu">
         	<div class="header-menu-wrap">
         		<ul class="fa-mnul clearfix">
-        			<li class="header-li-menu">
-        				<i class="fa fa-phone"></i>
-        				<a class="header-menu-a" href="/" tittle="Điện Thoại">Điện Thoại</a>
-        			</li>
-        			<li class="header-li-menu">
-        				<i class="fa fa-laptop"></i>
-        				<a class="header-menu-a" href="/" tittle="Điện Thoại">Laptop</a>
-        			</li>
-        			<li class="header-li-menu">
-        				<i class="fa fa-headphones"></i>
-        				<a class="header-menu-a" href="/" tittle="Điện Thoại">Phụ Kiện</a>
-        			</li>
-        			<li class="header-li-menu">
-        				<i class="fa fa-certificate"></i>
-        				<a class="header-menu-a" href="/" tittle="Điện Thoại">Khuyến Mãi</a>
-        			</li>
-        			<li class="header-li-menu">
-        				<i class="fa fa-refresh"></i>
-        				<a class="header-menu-a" href="/" tittle="Điện Thoại">Máy Đổi Trả</a>
-        			</li>
+        			@foreach($categories as $category)
+                        @if($category->subcate->count() > 0)
+                            <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                    {{$category->name}}
+                                    <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    @foreach($category->subcate as $submenu)
+                                        <li><a href="/subcate/{{$submenu->slug}}">{{$submenu->name}}</a></li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                        @else
+                            <li><a href="#">{{$category->name}}</a></li>
+                        @endif
+                    @endforeach
         		</ul>
         	</div>
         </nav>
 </header>
+<script>
+$(document).ready(function(){
+  $(".dropdown").on("show.bs.dropdown", function(event){
+    var x = $(event.relatedTarget).text(); // Get the button text
+  });
+});
+</script>

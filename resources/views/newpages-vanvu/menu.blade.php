@@ -88,33 +88,12 @@
 			<div class="menu-aside-notification-right">
 				<div class="aside-notification">
 					<p>THÔNG TIN CÔNG NGHỆ</p>
-					<span>See all</span>
 				</div>
 				<ul class="aside-news-ul">
 					<li>
 						<a class="clearfix" href="/" title="/">
-		                    <span>
 		                        <img class="lazy" src="{{asset('public/img/product-6.jpg')}}" width="68px" height="32px" alt="/">
-		                    </span>
-		                    <span class="test-span">Top 5 smartphone chụp hình đẹp nhất hiện tại, bất ngờ với vị trí thứ 2
-		                    </span>
-	                	</a>
-                	</li>
-                	<li>
-						<a class="clearfix" href="/" title="/">
-		                    <span>
-		                        <img class="lazy" src="{{asset('public/img/product-6.jpg')}}" width="68px" height="32px" alt="/">
-		                    </span>
-		                    <span class="test-span">Top 5 smartphone chụp hình đẹp nhất hiện tại, bất ngờ với vị trí thứ 2
-		                    </span>
-	                	</a>
-                	</li>
-                	<li>
-						<a class="clearfix" href="/" title="/">
-		                    <span>
-		                        <img class="lazy" src="{{asset('public/img/product-6.jpg')}}" width="68px" height="32px" alt="/">
-		                    </span>
-		                    <span class="test-span">Top 5 smartphone chụp hình đẹp nhất hiện tại, bất ngờ với vị trí thứ 2
+		                    <span>Top 5 smartphone chụp hình đẹp nhất hiện tại, bất ngờ với vị trí thứ 2
 		                    </span>
 	                	</a>
                 	</li>

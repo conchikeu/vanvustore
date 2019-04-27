@@ -39,7 +39,7 @@
                                         <div class="product-gallery text-center">
                                             @foreach($product->imageDetail as $key => $image)
                                                 @if($key > 0)
-                                                    <img src="{{asset('public/uploads/images/products/' . $image->image_detail)}}"
+                                                    <img src="{{asset("public/uploads/images/products/" . $image->image_detail)}}"
                                                          alt="">
                                                 @endif
                                             @endforeach
